@@ -41,15 +41,9 @@ let g:syntastic_javascript_checkers = ['xo']
 
 See the Syntastic [docs](https://github.com/vim-syntastic/syntastic/blob/master/doc/syntastic.txt) for more.
 
+### Formatting with [vim-autoformat](https://github.com/Chiel92/vim-autoformat)
 
-## Tip
-
-You can also use [vim-autoformat](https://github.com/Chiel92/vim-autoformat) to format your code with XO, using the following settings in your `.vimrc` file:
-
-```vim
-let g:formatdef_xo = '"xo --fix --stdin"'
-let g:formatters_javascript = ['xo']
-```
+Formatting with `vim-autoformat` will *just work* when XO is installed globally (`npm i -g xo`).
 
 
 ## License
