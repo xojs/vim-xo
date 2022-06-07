@@ -51,7 +51,7 @@ Once you install `vim-autoformat`, you will need to add the following to your `~
 
 ```diff
 +" vim-autoformatter
-+" https://github.com/Chiel92/vim-autoformat
++" https://github.com/vim-autoformat/vim-autoformat
 +let g:autoformat_autoindent = 0
 +let g:autoformat_retab = 0
 +let g:autoformat_remove_trailing_spaces = 0
