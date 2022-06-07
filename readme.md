@@ -47,6 +47,24 @@ Formatting with `vim-autoformat` will *just work* (since this plugin uses `npx x
 
 You do not need to install `xo` globally (and if it is installed globally, then please remove it as [global installation is deprecated](https://github.com/xojs/xo/releases/tag/v0.41.0)).
 
+Once you install `vim-autoformat`, you will need to add the following to your `~/.vimrc`:
+
+```diff
++" vim-autoformatter
++" https://github.com/Chiel92/vim-autoformat
++let g:autoformat_autoindent = 0
++let g:autoformat_retab = 0
++let g:autoformat_remove_trailing_spaces = 0
++let g:formatters_javascript = [ 'xo_javascript' ]
+```
+
+If you'd like your code to be formatted on save (instead of typing `:Autoformat` in vim buffer), then also add this line to your `~/.vimrc`:
+
+```diff
++au BufWrite * :Autoformat
+```
+
+See [vim-autoformat](https://github.com/vim-autoformat/vim-autoformat#how-to-use)'s "How to use" section for more information.
 
 ## License
 
