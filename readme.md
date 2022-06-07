@@ -43,7 +43,9 @@ See the Syntastic [docs](https://github.com/vim-syntastic/syntastic/blob/master/
 
 ### Formatting with [vim-autoformat](https://github.com/Chiel92/vim-autoformat)
 
-Formatting with `vim-autoformat` will *just work* when XO is installed globally (`npm i -g xo`).
+Formatting with `vim-autoformat` will *just work* (since this plugin uses `npx xo`).
+
+You do not need to install `xo` globally (and if it is installed globally, then please remove it as [global installation is deprecated](https://github.com/xojs/xo/releases/tag/v0.41.0)).
 
 
 ## License

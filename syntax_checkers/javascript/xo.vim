@@ -9,12 +9,17 @@ if exists('g:loaded_syntastic_javascript_xo_checker')
 	finish
 endif
 let g:loaded_syntastic_javascript_xo_checker = 1
+let g:syntastic_javascript_xo_exec = 'npx'
 
 let s:save_cpo = &cpo
 set cpo&vim
 
+function! SyntaxCheckers_javascript_xo_IsAvailable() dict
+		return executable(self.getExec())
+endfunction
+
 function! SyntaxCheckers_javascript_xo_GetLocList() dict
-	let makeprg = self.makeprgBuild({'args_before': '--reporter=compact'})
+	let makeprg = self.makeprgBuild({'args_before': 'xo --reporter=compact'})
 
 	let errorformat =
 		\ '%E%f: line %l\, col %c\, Error - %m,' .
