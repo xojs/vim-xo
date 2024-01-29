@@ -37,6 +37,7 @@ To activate XO, put the following in your `.vimrc` file:
 
 ```vim
 let g:syntastic_javascript_checkers = ['xo']
+let g:syntastic_typescript_checkers = ['xo']
 ```
 
 See the Syntastic [docs](https://github.com/vim-syntastic/syntastic/blob/master/doc/syntastic.txt) for more.
@@ -56,6 +57,7 @@ Once you install `vim-autoformat`, you will need to add the following to your `~
 +let g:autoformat_retab = 0
 +let g:autoformat_remove_trailing_spaces = 0
 +let g:formatters_javascript = [ 'xo_javascript' ]
++let g:formatters_typescript = [ 'xo_typescript' ]
 ```
 
 If you'd like your code to be formatted on save (instead of typing `:Autoformat` in vim buffer), then also add this line to your `~/.vimrc`:
